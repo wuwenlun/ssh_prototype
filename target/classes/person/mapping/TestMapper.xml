@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="person.dao.TestMapper" >
+  <resultMap id="testModelResultMap" type="person.model.TestModel" >
+  	<result column="id" property="id" jdbcType="VARCHAR"/>
+  	<result column="number" property="number" jdbcType="INTEGER"/>
+  </resultMap>
+  
+  <select id="selectAll" resultMap="testModelResultMap">
+  	select * from test_model t
+  </select>
+</mapper>
